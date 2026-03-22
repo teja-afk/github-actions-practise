@@ -29,5 +29,8 @@ jobs:
       - name: Shows the runner operating system
         run: uname -a
 
+      - name: Test Failure command
+        run: exit 1
+
 
 
