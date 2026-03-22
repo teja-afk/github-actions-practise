@@ -11,12 +11,23 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Check out the code
+      - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Print hello
+      - name: Says hello
         run: echo "Hello from GitHUb Actions!"
+      
+      - name: Shows current date and time
+        run: date
 
+      - name: Shows the name of the branch the triggeres the run
+        run: echo ${{ github.ref_name }}
+
+      - name: List the files in repo
+        run: ls
+
+      - name: Shows the runner operating system
+        run: uname -a
 
 
 
