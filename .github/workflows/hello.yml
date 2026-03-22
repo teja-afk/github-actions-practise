@@ -1,7 +1,10 @@
 name: Hello workflow
 
 on:
-  push: [main]
+  push:
+    branches: [main]
+
+  workflow_dispatch:
 
 jobs:
   greet:
